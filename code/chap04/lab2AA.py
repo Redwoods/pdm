@@ -38,6 +38,9 @@ plt.scatter(X_test, y_test,  color='black')
 plt.plot(X_test, y_pred, color='blue', linewidth=3)
 plt.show()
 
+#
+# pandas
+#
 ########################################
 # 당뇨병 데이터 구조 => DataFrame
 # Attribute Information:
@@ -77,6 +80,12 @@ df[['bp']].plot()
 df[['s6']].plot()
 df[['target']].plot()
 plt.show()
+
+# multiple plot
+df[['bmi','bp','s6','target']].plot()
+# df[['bmi','bp','s6']].plot()
+plt.show()
+
 # X and y
 # 하나의 특징(s6: 혈당치)만 추려내서 2차원 배열로 만든다. BMI 특징의 인덱스가 2이다.
 diabetes_X_new2=df.s6.values 
@@ -108,7 +117,7 @@ import seaborn as sns
 sns.heatmap(df.corr(), 
         xticklabels=df.columns,
         yticklabels=df.columns,
-        vmin= -1, vmax=1.0)
+        vmin= -1, vmax=1.0) #, cmap='coolwarm')
 plt.show()
 
 sns.pairplot(df)
@@ -152,3 +161,9 @@ print(regr3.score(X_train, y_train))
 print(regr.score(X_train, y_train))
 print(regr2.score(X_train, y_train))
 print(regr3.score(X_train, y_train))
+
+sns.pairplot(df[['bmi','s5','s6','target']])
+plt.show()
+#
+# {DIY} bp vs. target
+#

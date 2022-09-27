@@ -38,12 +38,13 @@ y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
 
 # 0.1 간격으로 메쉬 그리드 좌표를 만든다. 
 xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.1), np.arange(y_min, y_max, 0.1))
-# xx.shape,yy.shape
-# xx.ravel().shape  # , 123*91
+xx.shape,yy.shape
+xx.ravel().shape  # , 123*91
+np.c_[xx.ravel(), yy.ravel()].shape
 
 # 메쉬 그리드 데이터에 대하여 예측을 한다. 
 Z = clf.predict(np.c_[xx.ravel(), yy.ravel()]).reshape(xx.shape)
-
+Z.shape
 # 컨투어를 그린다. 
 plt.contourf(xx, yy, Z, alpha=0.4)
 plt.show()

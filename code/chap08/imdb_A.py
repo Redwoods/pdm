@@ -17,7 +17,6 @@ def one_hot_sequences(sequences, dimension=1000):
     return results
 
 train_data = one_hot_sequences(train_data)
-
 test_data = one_hot_sequences(test_data)
 
 # train_data.shape,test_data.shape

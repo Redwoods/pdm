@@ -1,12 +1,6 @@
-import numpy as np
-from  tensorflow.keras.layers.experimental.preprocessing import Normalization
+from sklearn.preprocessing import MinMaxScaler
+data = [[-1, 2], [-0.5, 6], [0, 10], [1, 18]]
 
-adapt_data = np.array([[1.], [2.], [3.], [4.], [5.]], dtype=np.float32)
-input_data = np.array([[1.], [2.], [3.]], np.float32)
-layer = Normalization()
-layer.adapt(adapt_data)
-print(layer(input_data))
-
-input_data = np.array([[1.], [2.], [3.]], np.float32)
-layer = Normalization()
-print(layer(input_data))
+scaler = MinMaxScaler()
+scaler.fit(data)		# 최대값과 최소값을 알아낸다. 
+print(scaler.transform(data))	# 데이터를 변환한다. 

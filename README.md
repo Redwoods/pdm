@@ -30,7 +30,7 @@
   - 개인별 repo  
     * [pdm01: 강지민](https://github.com/rkdwlals37/pdm01) * * * # # * P1@
     * [pdm02: 김민구](https://github.com/alsrn36533/pdm02) * * @ * * * P1@/2@
-    * [pdm03: 김수웅](https://github.com/rlatndnd9804/pdm03) * * * * * * P1@/2
+    * [pdm03: 김수웅](https://github.com/rlatndnd9804/pdm03) * * * * * * P1@/2@/2
     * [pdm05: 김태윤](https://github.com/kimtaeyoon1/pdm05) * * @ * * * P1@@
     * [pdm06: 박민혁](https://github.com/minhyeokpark/pdm06) * * * * * * P1@
     * [pdm08: 박희주](https://github.com/suyangegrong/pdm08) * * * # # * P1@@

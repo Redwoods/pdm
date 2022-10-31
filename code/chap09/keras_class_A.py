@@ -20,3 +20,5 @@ x = tf.reshape(x, [1, 3, 3, 1])
 max_pool_2d = tf.keras.layers.MaxPooling2D(pool_size=(2, 2), 
                                            strides=(1, 1), padding='valid')
 print(max_pool_2d(x))
+
+# [DIY] test 'same' padding in MaxPooling2D layer

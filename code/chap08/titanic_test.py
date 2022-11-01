@@ -58,7 +58,8 @@ for ix in test.index:
     else:
        test.loc[ix, 'Sex']=0 
 
-
+# 2차원 배열을 1차원 배열로 평탄화한다. 
+# target_test = np.ravel(test.Survived) 
 # 생존여부를 학습 데이터에서 삭제한다. 
 # test.drop(['Survived'], inplace=True, axis=1)
 test = test.astype(float)     
@@ -69,3 +70,5 @@ pred_test = model.predict(test, batch_size=1)
 np.where(pred_test >= 0.5)[0].size  # 152
 # Dead
 np.where(pred_test < 0.5)[0].size   # 266
+
+

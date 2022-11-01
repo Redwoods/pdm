@@ -5,11 +5,14 @@ import tensorflow as tf
 # 데이터 세트를 읽어들인다. 
 train = pd.read_csv("train.csv", sep=',')
 test = pd.read_csv("test.csv", sep=',')
-
+# print(train.shape)
 # 필요없는 컬럼을 삭제한다. 
 train.drop(['SibSp', 'Parch', 'Ticket', 'Embarked', 'Name',\
         'Cabin', 'PassengerId', 'Fare', 'Age'], inplace=True, axis=1)
-
+# print(train.shape)
+# train.head()
+train.isna().sum()
+train.duplicated().sum()
 # 결손치가 있는 데이터 행은 삭제한다. 
 train.dropna(inplace=True)
 

@@ -21,10 +21,10 @@ X_test = X_test/255.0
 
 # 순차 모델을 구축한다. 
 model = Sequential()
-model.add(Conv2D(64, activation = 'relu', kernel_size = (3,3 )))
+model.add(Conv2D(64, activation = 'relu', kernel_size = (3,3 ), input_shape = (32, 32, 3)))
 model.add(MaxPooling2D(pool_size = (2, 2)))
 model.add(Conv2D(32, activation = 'relu', kernel_size = (3,3 )))
-model.add(Flatten(input_shape = (32, 32, 3)))
+model.add(Flatten())
 model.add(Dense(80, activation = 'relu'))
 model.add(Dense(10, activation = 'softmax'))
 

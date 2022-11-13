@@ -92,6 +92,8 @@ plt.show()
 #
 # Create a data augmentation stage with horizontal flipping, rotations, zooms
 #
+tf.get_logger().setLevel('ERROR')  # Clear warnings in data augmentation
+
 from tensorflow import keras
 data_augmentation = keras.Sequential([
   layers.RandomFlip("horizontal"),
@@ -102,6 +104,35 @@ data_augmentation = keras.Sequential([
   # layers.Rescaling(1./255) # keep for ResNet50V2, remove for EfficientNetB0
 ], name ="data_augmentation")
 
+
+# Plot the augmented images
+plt.figure(figsize=(10,10))
+image_idx = 0
+for images, labels in train_data.take(1):    # Make a batch of images & labels
+    print(labels,images.shape)
+    for i in range(9):
+        ax = plt.subplot(3, 3, i + 1)
+        aug_img = data_augmentation(tf.expand_dims(images[image_idx], axis=0))
+        print(aug_img.shape)
+        plt.imshow(aug_img[0].numpy().astype("uint8"))
+        plt.title("{}".format(names[int(labels[image_idx])]))
+        plt.axis("off")
+    break
+plt.show()
+
+plt.figure(figsize=(10,10))
+image_idx = 0
+for images, labels in test_data.take(1):    # Make a batch of images & labels
+    print(labels,images.shape)
+    for i in range(9):
+        ax = plt.subplot(3, 3, i + 1)
+        aug_img = data_augmentation(tf.expand_dims(images[image_idx], axis=0))
+        print(aug_img.shape)
+        plt.imshow(aug_img[0].numpy().astype("uint8"))
+        plt.title("{}".format(names[int(labels[image_idx])]))
+        plt.axis("off")
+    break
+plt.show()
 
 #
 # Transfer learning

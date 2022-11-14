@@ -257,6 +257,7 @@ print("예측값=", y_pred[0], np.argmax(y_pred0[0]))
 from sklearn.metrics import accuracy_score
 accuracy_score(y_test, y_pred)
 # 0.9595
+# 0.9654
 
 #################################
 # Evaluate the model
@@ -265,3 +266,4 @@ model.evaluate(ds_test)  #,y_test)
 # loss: 1.1689 - accuracy: 0.6468
 # loss: 0.9207 - accuracy: 0.6799    # with dropout: 0.5
 # loss: 0.1658 - accuracy: 0.9595    # Transfer learning using EfficientNetB1
+# loss: 0.1625 - accuracy: 0.9654    # Transfer learning using EfficientNetB1

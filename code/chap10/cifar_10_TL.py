@@ -127,7 +127,13 @@ base_model.trainable = True
 
 for layer_number, layer in enumerate(base_model.layers):
   print(layer_number, layer.trainable, end=", ")
-  
+
+# Check the input and output of base_model
+ix=layers.Input(shape=(128,128,3))
+print(base_model(ix))
+# KerasTensor(type_spec=TensorSpec(shape=(None, 4, 4, 1280), dtype=tf.float32, name=None), 
+# name='efficientnetb1/top_activation/IdentityN:0', 
+# description="created by layer 'efficientnetb1'")
 
 model = tf.keras.Sequential([
   layers.Input(shape=(128,128,3),name='input_layer'),
@@ -140,6 +146,7 @@ model = tf.keras.Sequential([
   layers.Dense(128,activation='relu'),
   layers.Dense(10,activation='softmax')
 ])
+
 
 model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 
               loss = 'sparse_categorical_crossentropy', 

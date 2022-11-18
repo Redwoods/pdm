@@ -92,8 +92,8 @@ data_augmentation = keras.Sequential([
   layers.RandomFlip("horizontal"),
   layers.RandomRotation(0.2),
   layers.RandomZoom(0.2),
-  layers.RandomHeight(0.2),
-  layers.RandomWidth(0.2),
+  # layers.RandomHeight(0.2),
+  # layers.RandomWidth(0.2),
   # layers.Rescaling(1./255) # keep for ResNet50V2, remove for EfficientNetB0
 ], name ="data_augmentation")
 
@@ -139,7 +139,8 @@ model = tf.keras.Sequential([
   layers.Conv2D(64,3,activation='relu'),
   layers.MaxPool2D(pool_size=2),
   layers.Flatten(),
-  layers.Dense(1,activation='sigmoid')
+  layers.Dense(units=512, activation='relu'),
+  layers.Dense(1, activation='sigmoid')
 ])
 
 model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), 

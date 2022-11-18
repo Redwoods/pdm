@@ -24,6 +24,9 @@ model.add(layers.Dense(units=1, activation='sigmoid'))
 model.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
 model.summary()
 
+from tensorflow import keras
+keras.utils.plot_model(model, show_shapes=True)
+
 #### Data augmentation
 # https://machinelearningmastery.com/image-augmentation-deep-learning-keras/
 #
@@ -47,6 +50,10 @@ test_generator = test_datagen.flow_from_directory(
     target_size=(128, 128),
     batch_size=20,
     class_mode = 'binary')
+
+# Inspect train_generator
+train_generator
+# <keras.preprocessing.image.DirectoryIterator at 0x1ab237d6880>
 
 #
 # Visualize data from data generator

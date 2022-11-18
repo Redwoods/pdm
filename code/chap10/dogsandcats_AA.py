@@ -41,28 +41,9 @@ img = view_random_image(target_dir = train_dir, target_class = "cat")
 img = tf.constant(img)
 plt.show()
 
+#
 # Setting up the data
-# 
-# from tensorflow.keras.preprocessing.image import ImageDataGenerator
-
-# train_datagen = ImageDataGenerator(rescale = 1./255, shear_range = 0.2,
-#   zoom_range = 0.2, horizontal_flip = True)
-
-# test_datagen = ImageDataGenerator(rescale = 1./255)
-
-# train_generator = train_datagen.flow_from_directory(
-#     train_dir,                      
-#     target_size=(128, 128), # (180,180)
-#     batch_size=20,          # 32,...
-#     class_mode = 'binary')
-
-# test_generator = test_datagen.flow_from_directory(
-#     test_dir,
-#     target_size=(128, 128),
-#     batch_size=20,
-#     class_mode = 'binary')
-
-# import tensorflow as tf
+#
 from tensorflow.keras.preprocessing import image_dataset_from_directory
 IMG_SIZE = (128, 128)
 batchSize=20
@@ -116,8 +97,9 @@ data_augmentation = keras.Sequential([
   # layers.Rescaling(1./255) # keep for ResNet50V2, remove for EfficientNetB0
 ], name ="data_augmentation")
 
-
-# Plot the augmented images
+#
+# Visualize the augmented images
+#
 plt.figure(figsize=(10,10))
 image_idx = 0
 for images, labels in train_data.take(1):    # Make a batch of images & labels
@@ -147,54 +129,8 @@ for images, labels in test_data.take(1):    # Make a batch of images & labels
 plt.show()
 
 #
-# Visualize data from data generator
-# 1. Extract one batch
-# for x_data, t_data in train_generator:
-#     print(x_data.shape)  # (20, 128, 128, 3)
-#     print(type(x_data))  # <class 'numpy.ndarray'>
-#     print(t_data)        # [0. 1. 1. 1. 1. 0. 0. 1. 0. 0. 1. 0. 0. 1. 1. 0. 0. 0. 1. 0.]
-#     # 0 : 고양이,  1 : 댕댕이
-#     # break
-
-# # 2. Display images in the batch
-# fig = plt.figure(figsize=(15, 12))
-# # axs = []
-# for x_data, t_data in train_generator:
-#     for idx, img in enumerate(x_data):
-#         ax = plt.subplot(4, 5, idx + 1)
-#         # axs.append(fig.add_subplot(4,5,idx+1))
-#         plt.imshow(img)
-#         plt.title("{}".format(str(int(t_data[idx]))))
-#         plt.axis("off")
-#     break
-# plt.show()
-
-# ## Creating the model 
-# # Setting up the model
-# Model - Sequential model
-# model = models.Sequential()
-# model.add(layers.Conv2D(32,(3,3), activation='relu', input_shape=(128,128,3)))
-# model.add(layers.MaxPooling2D(2,2))
-# model.add(layers.Conv2D(64,(3,3), activation='relu'))
-# model.add(layers.MaxPooling2D(2,2))
-# model.add(layers.Flatten())
-# model.add(layers.Dense(units=512, activation='relu'))
-# model.add(layers.Dense(units=1, activation='sigmoid'))
-# 
-# # Functional Model
-# inputs = tf.keras.layers.Input(shape = (128,128,3), name = "Input_Layer")
-# #x = tf.keras.layers.experimental.preprocessing.Rescaling(1./255)(inputs)
-# x = data_augmentation(inputs)
-# x = tf.keras.layers.Conv2D(32, (3,3), activation='relu', padding='same')(x)
-# x = tf.keras.layers.MaxPooling2D(2,2)(x)
-# x = tf.keras.layers.Conv2D(64,(3,3), activation='relu', padding='same')(x)
-# x = tf.keras.layers.MaxPooling2D(2,2)(x)
-# x = tf.keras.layers.Flatten()(x)
-# x = layers.Dense(units=512, activation='relu')(x)
-# outputs = tf.keras.layers.Dense(1, activation = "sigmoid")(x)
-# model = tf.keras.Model(inputs, outputs)
-
 # Sequential model with data augmentation
+# 
 model = tf.keras.Sequential([
   layers.Input(shape=(128,128,3),name='input_layer'),
   data_augmentation,
@@ -211,6 +147,7 @@ model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001),
               metrics = ['accuracy'])
 
 model.summary()
+# from tensorflow import keras
 keras.utils.plot_model(model, show_shapes=True)
 
 # Building the Model
@@ -244,14 +181,6 @@ history = model.fit(train_data,
 
 #
 model.evaluate(test_data)
-
-# training graph
-plt.plot(history.history['accuracy'])
-plt.plot(history.history['val_accuracy'])
-plt.xlabel('Epoch')
-plt.xlabel('Accuracy')
-plt.legend(['Train', 'Test'], loc='upper left')
-plt.show()
 
 #############################################
 # More training graphs

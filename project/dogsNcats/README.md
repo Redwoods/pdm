@@ -1,4 +1,4 @@
-# dogs & cats dataset fro Kaggle
+# dogs & cats dataset from Kaggle
 
 # dataset
 - PetImages/train/cat 1000

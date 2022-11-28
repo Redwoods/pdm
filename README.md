@@ -28,12 +28,12 @@
   - 수업 노트 관리 및 과제/프로젝트 제출/평가 (평가 단계: #, *, @, @@)
   
   - 개인별 repo  
-    * [pdm01: 강지민](https://github.com/rkdwlals37/pdm01) * * * # # * P1@ # # # */2
-    * [pdm02: 김민구](https://github.com/alsrn36533/pdm02) * * @ * * * P1@/2@ * * * *
-    * [pdm03: 김수웅](https://github.com/rlatndnd9804/pdm03) * * * * * * P1@/2@/2 * * * *
-    * [pdm05: 김태윤](https://github.com/kimtaeyoon1/pdm05) * * @ * * * P1@@ * * * * 
-    * [pdm06: 박민혁](https://github.com/minhyeokpark/pdm06) * * * * * * P1@ * * # #
-    * [pdm08: 박희주](https://github.com/suyangegrong/pdm08) * * * # # * P1@@ ? ? # #
+    * [pdm01: 강지민](https://github.com/rkdwlals37/pdm01) * * * # # * P1@ # # # */2 #
+    * [pdm02: 김민구](https://github.com/alsrn36533/pdm02) * * @ * * * P1@/2@ * * * * *
+    * [pdm03: 김수웅](https://github.com/rlatndnd9804/pdm03) * * * * * * P1@/2@/2 * * * * *
+    * [pdm05: 김태윤](https://github.com/kimtaeyoon1/pdm05) * * @ * * * P1@@ * * * * * 
+    * [pdm06: 박민혁](https://github.com/minhyeokpark/pdm06) * * * * * * P1@ * * # # 
+    * [pdm08: 박희주](https://github.com/suyangegrong/pdm08) * * * # # * P1@@ ? ? # # *
     * [pdm09: 서준용](https://github.com/joi0804/pdm09) * * @ * * * P1@@ * * *? #
     * [pdm10: 신유창](https://github.com/pdm10/pdm10) * * @ * * * P1@@! * * * @ 
     * [pdm11: 여창준](https://github.com/dpfpsel0622/pdm11) * * @ * * * P1@/2@ * * * *

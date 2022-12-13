@@ -37,7 +37,7 @@
     * [pdm09: 서준용](https://github.com/joi0804/pdm09) * * @ * * * P1@@ * * *? # */2 @@
     * [pdm10: 신유창](https://github.com/pdm10/pdm10) * * @ * * * P1@@! * * * @ * @@
     * [pdm11: 여창준](https://github.com/dpfpsel0622/pdm11) * * @ * * * P1@/2@ * * * * * @@
-    * [pdm12: 원지찬](https://github.com/dnjswlcks67/pdm12) * * @Q * * * P1@/2@ * * * * *
+    * [pdm12: 원지찬](https://github.com/dnjswlcks67/pdm12) * * @Q * * * P1@/2@ * * * * * @@
     * [pdm15: 정수현](https://github.com/jungsh210/pbm15) * * * # # * P1@ * * */2 # #
     * [pdm16: 조현호]() # # # # # # P1# # # # # #
     * [pdm17: 조현훈](https://github.com/pdm17/pdm17) * * @ * * * P1@@ * * * * * @@

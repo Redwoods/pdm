@@ -8,14 +8,14 @@
    * pip install spyder-notebook
   
 3. pip install tensorflow
-4. pip install scikeras
-5. pip install keras-nlp
+4. tensorflow_datasets
+5. pip install scikeras
 6. pip install streamlit
 7. pip install pydot
    * Download graphviz and install it.
 8. pip install opencv-python
 9. pip install finance-datareader 
-10. ..., tensorflow_datasets, tensorflow_addons
+10. ..., tensorflow_addons, pip install keras-nlp
 
 ---
 

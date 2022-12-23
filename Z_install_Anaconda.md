@@ -3,8 +3,9 @@
 1. Download anaconda and install it in windows.  (python 3.9.12 설치됨.)
    * [anaconda prompt에서 다음 실행] conda update anaconda
   
-2. pip install spyder -U
+2. pip install spyder
    * pip install spyder-terminal
+   * pip install spyder-notebook
   
 3. pip install tensorflow
 4. pip install scikeras

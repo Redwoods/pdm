@@ -1,4 +1,4 @@
-# ResNet50 feature extraction
+# ResNet50 feature extraction from ChatGPT
 
 **Human:**
 What is wrong in the below code?

@@ -77,7 +77,7 @@ ix = keras.layers.Input(shape=(224,224,1))
 x = keras.layers.RepeatVector(3)(ix)
 
 RepeatVector does not make the proper input to base_model.
-Please shaow me the correct code.
+Please show me the correct code.
 
 ***
 

@@ -1,2 +1,2 @@
-## python noteboks
+# python notebooks
 ---

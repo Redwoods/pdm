@@ -1,10 +1,10 @@
-# pdm - 생체신호 마이닝 (2022 2학기)
+# pdm - 생체신호 마이닝 (2023 2학기)
 ## Physiological Data Mining
 ---
 * Physiological data
   - images & movies: X-ray, CT, MRI, PET, ...
   - signals: ECG, EEG, PPG, EMG, ...
-  - text: 문진, DNA, SNS, EHR, ...
+  - text/tabular: 문진, DNA, EHR, ...
 * Data Mining
   - 데이터 수집 (Acquisition)
   - 데이터 전처리(Preprocessing)
@@ -28,19 +28,21 @@
   - 수업 노트 관리 및 과제/프로젝트 제출/평가 (평가 단계: #, *, @, @@)
   
   - 개인별 repo  
-    * [pdm01: 강지민](https://github.com/rkdwlals37/pdm01) * * * # # * P1@ # # # */2 # * P2 *
-    * [pdm02: 김민구](https://github.com/alsrn36533/pdm02) * * @ * * * P1@/2@ * * * * * @@ P2 @@@
-    * [pdm03: 김수웅](https://github.com/rlatndnd9804/pdm03) * * * * * * P1@/2@/2 * * * * * @@ P2 @@
-    * [pdm05: 김태윤](https://github.com/kimtaeyoon1/pdm05) * * @ * * * P1@@ * * * * * @@ P2 @@@
-    * [pdm06: 박민혁](https://github.com/minhyeokpark/pdm06) * * * * * * P1@ * * # # * * P2 @@@
-    * [pdm08: 박희주](https://github.com/suyangegrong/pdm08) * * * # # * P1@@ ? ? # # * @ P2 *
-    * [pdm09: 서준용](https://github.com/joi0804/pdm09) * * @ * * * P1@@ * * *? # */2 @@ P2 @@
-    * [pdm10: 신유창](https://github.com/pdm10/pdm10) * * @ * * * P1@@! * * * @ * @@ P2 @@@
-    * [pdm11: 여창준](https://github.com/dpfpsel0622/pdm11) * * @ * * * P1@/2@ * * * * * @@ P2 @
-    * [pdm12: 원지찬](https://github.com/dnjswlcks67/pdm12) * * @Q * * * P1@/2@ * * * * * @@ P2 @@
-    * [pdm15: 정수현](https://github.com/jungsh210/pbm15) * * * # # * P1@ * * */2 # # # P2 *
-    * [pdm16: ]
-    * [pdm17: 조현훈](https://github.com/pdm17/pdm17) * * @ * * * P1@@ * * * * * @@ P2@@
+    * [pdm01: ]
+    * [pdm02: ]
+    * [pdm03: ]
+    * [pdm04: ]
+    * [pdm05: ]
+    * [pdm06: ]
+    * [pdm07: ]
+    * [pdm08: ]
+    * [pdm09: ]
+    * [pdm10: ]
+    * [pdm11: ]
+    * [pdm12: ]
+    * [pdm13: ]
+    * [pdm14: ]
+    * [pdm15: ]
 
 ---
  
@@ -54,9 +56,20 @@
  - [딥 러닝을 이용한 자연어 처리 입문](https://wikidocs.net/book/2155)
  - [Pytorch 딥러닝 입문](https://github.com/Justin-A/DeepLearning101)  
  ---
- ## Goooooood Intro to ML & DL
- - [linear-algebra-for-ML](https://www.freecodecamp.org/news/how-machine-learning-leverages-linear-algebra-to-optimize-model-trainingwhy-you-should-learn-the-fundamentals-of-linear-algebra/)
- ---
+## Goooood tutorial (https://github.com/mrdbourke?tab=repositories)  
+- [Zero to Mastery Deep Learning with TensorFlow](https://github.com/mrdbourke/tensorflow-deep-learning)
+- [Zero to Mastery Deep Learning with PyTorch](https://github.com/mrdbourke/pytorch-deep-learning)
+---
+## Transfer Learning 
+<img src="https://github.com/mrdbourke/pytorch-deep-learning/raw/main/images/06-transfer-learning-example-overview.png" width=900 height=600>  
+
+- #### (src: https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/06-transfer-learning-example-overview.png)  
+- #### (src: https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/01-machine-learning-a-game-of-two-parts.png)
+
+## Multi-modal LLM  
+- #### (src: https://cdn.aitimes.com/news/photo/202303/149758_158620_2947.png)  
+
+---
  
   #### 연구실: E319, email: chaos21c@gmail.com, Teams: yish@live.inje.ac.kr
  

@@ -1,20 +1,15 @@
-class_vector =[2, 6, 6, 1]
-  
-from tensorflow.keras.utils import to_categorical
-output = to_categorical(class_vector, num_classes = 7, dtype ="int32")
-print(output)
+import numpy as np
+X = np.array([['Korea', 44, 7200], 
+		['Japan', 27, 4800], 
+		['China', 30, 6100]])
 
-#
-# mnist data
-#
-import tensorflow as tf
-mnist = tf.keras.datasets.mnist
+from sklearn.preprocessing import OneHotEncoder
+onehotencoder = OneHotEncoder()
 
-(x_train, y_train),(x_test, y_test) = mnist.load_data()
-print(x_train.shape,y_train.shape)
+# 원하는 열을 뽑아서 2차원 배열로 만들어서 전달하여야 한다. 
+XX = onehotencoder.fit_transform(X[:,0].reshape(-1,1)).toarray()
+print(XX)
 
-y_train[:10]
-
-y_train_one_hot = to_categorical(y_train, num_classes = 10) #, dtype ="int32")
-y_train_one_hot.shape
-y_train_one_hot[:10]
+X = np.delete(X, [0], axis=1)		# 0번째 열 삭제
+X = np.concatenate((XX, X), axis = 1)	# X와 XX를 붙인다. 
+print(X)

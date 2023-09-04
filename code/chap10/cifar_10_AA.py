@@ -35,9 +35,13 @@ model.summary()
 keras.utils.plot_model(model, show_shapes=True)
 
 # 모델 구조 시각화 - visualkareas.layered_view()
+# !pip install visualkeras
+# !fc-list
+
 import visualkeras
 from PIL import ImageFont
-font = ImageFont.truetype("arial.ttf", 24)
+# font = ImageFont.truetype("arial.ttf", 24)  # Windows font
+font = ImageFont.truetype("LiberationMono-Bold.ttf", 24)  # Linux font
 visualkeras.layered_view(model, 
                          to_file='./figures/cnn2.png', 
                          legend=True, font=font, spacing=80, 

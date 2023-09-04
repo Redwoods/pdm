@@ -15,7 +15,7 @@ train.isna().sum()
 train.duplicated().sum()
 # 결손치가 있는 데이터 행은 삭제한다. 
 train.dropna(inplace=True)
-
+train.shape
 # 기호를 수치로 변환한다. 
 for ix in train.index:
     if train.loc[ix, 'Sex']=="male":
@@ -23,13 +23,15 @@ for ix in train.index:
     else:
        train.loc[ix, 'Sex']=0 
 
+train.head()
 # 2차원 배열을 1차원 배열로 평탄화한다. 
 target = np.ravel(train.Survived) 
-
+target.shape
 # 생존여부를 학습 데이터에서 삭제한다. 
 train.drop(['Survived'], inplace=True, axis=1)
 train = train.astype(float)     # 최근 소스에서는 float형태로 형변환하여야 
-
+train.shape
+train.head()
 # 케라스 모델을 생성한다. 
 model = tf.keras.models.Sequential()
 model.add(tf.keras.layers.Dense(16, activation='relu', input_shape=(2,)))
@@ -52,6 +54,7 @@ test.drop(['SibSp', 'Parch', 'Ticket', 'Embarked', 'Name',\
         'Cabin', 'PassengerId', 'Fare', 'Age'], inplace=True, axis=1)
 
 # 결손치가 있는 데이터 행은 삭제한다. 
+test.isna().sum()
 test.dropna(inplace=True)
 
 # 기호를 수치로 변환한다. 

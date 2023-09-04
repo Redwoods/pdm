@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 # len(train_data[0]),np.unique(train_data[0]).size
 # max(train_data.max())
 # train_data.shape,train_labels.shape
+# train_labels[:10]
 
 # 원-핫 인코딩으로 변환하는 함수
 def one_hot_sequences(sequences, dimension=1000):
@@ -20,6 +21,7 @@ train_data = one_hot_sequences(train_data)
 test_data = one_hot_sequences(test_data)
 
 # train_data.shape,test_data.shape
+# train_data[0].shape
 # train_data[0]
 
 # 신경망 모델 구축
@@ -58,7 +60,7 @@ plt.plot(history.history['val_accuracy'])
 plt.title('Accuracy Plot')
 plt.ylabel('accuracy')
 plt.xlabel('epochs')
-plt.legend(['train error', 'val error'], loc='upper left')
+plt.legend(['train accuracy', 'val accuracy'], loc='upper left')
 plt.show()
 
 #############################################

@@ -25,10 +25,7 @@
   - VSCode (extension: Korean Language Pack, Python)
 ---
 * GitHub
-  - 수업 노트 관리 및 과제/프로젝트 제출/평가 (평가 단계: #, *, @, @@)
-  
-![image](https://github.com/Redwoods/pdm/assets/8246219/9dc1b5f1-b939-445f-8ff2-408e57b422d7)
-
+  - 수업 노트 관리 및 과제/프로젝트 제출/평가 (평가 단계: #, *, @, @@) 
   - 개인별 repo  
     * [pdm01: 강민석]
     * [pdm02: 박미르]

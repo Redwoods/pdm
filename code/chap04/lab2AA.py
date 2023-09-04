@@ -6,6 +6,7 @@ from sklearn import datasets, linear_model
 # 당뇨병 데이터 세트를 적재한다. 
 diabetes = datasets.load_diabetes()
 str(diabetes)
+print(diabetes.keys())
 str(diabetes.DESCR)
 
 ##########################################
@@ -30,12 +31,16 @@ print(regr.score(X_train, y_train))
 
 # 테스트 데이터로 예측해보자. 
 y_pred = regr.predict(X_test) 
+from sklearn import metrics
+scores = metrics.r2_score(y_test, y_pred)  # r2_score for regression
+print(scores)
 
 # 실제 데이터와 예측 데이터를 비교해보자. 
 # plt.plot(y_test, y_pred, '.')
 
 plt.scatter(X_test, y_test,  color='black')
 plt.plot(X_test, y_pred, color='blue', linewidth=3)
+plt.title(f"Test data: R2 = {np.round(scores,3)}")
 plt.show()
 
 #

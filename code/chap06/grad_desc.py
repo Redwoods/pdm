@@ -15,3 +15,5 @@ for i in range(max_iterations):
     print("손실함수값(", x, ")=", loss_func(x))
 
 print("최소값 = ", x)
+
+# [DIY] 손실의 감소가 문턱치보다 작아지면 학습을 중단시키는 코드를 추가하시오.

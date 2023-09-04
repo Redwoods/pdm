@@ -58,6 +58,7 @@ def test():
 fit()
 test()
 #########################
+# 학습된 가중치 확인
 print(W1)
 print(W2)
 print(B1,B2)

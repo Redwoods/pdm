@@ -27,16 +27,18 @@
 * GitHub
   - 수업 노트 관리 및 과제/프로젝트 제출/평가 (평가 단계: #, *, @, @@)
   
+![image](https://github.com/Redwoods/pdm/assets/8246219/9dc1b5f1-b939-445f-8ff2-408e57b422d7)
+
   - 개인별 repo  
-    * [pdm01: ]
-    * [pdm02: ]
-    * [pdm03: ]
-    * [pdm04: ]
-    * [pdm05: ]
-    * [pdm06: ]
-    * [pdm07: ]
-    * [pdm08: ]
-    * [pdm09: ]
+    * [pdm01: 강민석]
+    * [pdm02: 박미르]
+    * [pdm03: 송재윤]
+    * [pdm04: 정용철]
+    * [pdm05: 정종빈]
+    * [pdm06: 천윤서]
+    * [pdm07: 한유태]
+    * [pdm08: 현재진]
+    * [pdm09: 황해성]
     * [pdm10: ]
     * [pdm11: ]
     * [pdm12: ]
